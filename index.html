@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Moda Têxtil - Tecelagem e Beneficiamento de Tecidos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .fabric-card {
+            transition: all 0.3s ease;
+        }
+        
+        .fabric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: calc(100% - 24px);
+            width: 2px;
+            background-color: #3b82f6;
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-blue-600 text-white p-2 rounded mr-3">
+                    <i class="fas fa-tshirt text-xl"></i>
+                </div>
+                <h1 class="text-xl font-bold text-gray-800">Pro Moda Têxtil</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-blue-600 font-medium">Início</a>
+                <a href="#sobre" class="text-gray-600 hover:text-blue-600">Sobre</a>
+                <a href="#produtos" class="text-gray-600 hover:text-blue-600">Produtos</a>
+                <a href="#servicos" class="text-gray-600 hover:text-blue-600">Serviços</a>
+                <a href="#contato" class="text-gray-600 hover:text-blue-600">Contato</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Tecelagem e Beneficiamento de Tecidos</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Soluções têxteis completas desde a produção até o acabamento final</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#produtos" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition">Nossos Produtos</a>
+                <a href="#contato" class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-lg font-medium transition">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Sobre a Pro Moda Têxtil</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Nossa História</h3>
+                    <p class="text-gray-600 mb-6">Fundada em 1995, a Pro Moda Têxtil começou como uma pequena tecelagem no interior de São Paulo. Ao longo dos anos, investimos em tecnologia e capacitação para nos tornarmos referência no setor têxtil brasileiro.</p>
+                    <p class="text-gray-600">Hoje, com unidades produtivas modernas e uma equipe altamente qualificada, atendemos clientes em todo o território nacional e estamos expandindo nossa atuação para mercados internacionais.</p>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Fábrica Pro Moda Têxtil" class="w-full h-auto">
+                </div>
+            </div>
+            
+            <!-- Mission, Vision and Values -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bullseye text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Missão</h3>
+                    <p class="text-gray-600">Produzir tecidos de alta qualidade com processos sustentáveis, atendendo às necessidades diversificadas do mercado têxtil com excelência e inovação.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-eye text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Visão</h3>
+                    <p class="text-gray-600">Ser reconhecida como líder no setor têxtil nacional, destacando-se pela qualidade dos produtos, sustentabilidade e atendimento personalizado.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-heart text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Valores</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Qualidade acima de tudo</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Sustentabilidade ambiental</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Inovação constante</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Respeito às pessoas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produtos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossos Produtos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Tecidos produzidos com os mais altos padrões de qualidade para diversas aplicações</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="fabric-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1597404290320-e6d5d3d2e423?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Tecido para Forro" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Tecido para Forro</h3>
+                        <p class="text-gray-600 mb-4">Linha completa de tecidos para forro de roupas, com variedade de cores, texturas e composições para atender diferentes necessidades de conforto e durabilidade.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">100% algodão</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Poliéster</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Misto</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="fabric-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3c91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1934&q=80" alt="Tecido para Lençol" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Tecido para Lençol</h3>
+                        <p class="text-gray-600 mb-4">Tecidos especialmente desenvolvidos para confecção de lençóis, com toque macio, alta durabilidade e variedade de tramas para diferentes preferências de conforto.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Algodão egípcio</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Microfibra</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Percal</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="fabric-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556905055-8e7e0a68f1cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Tecido para Decoração" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Tecido para Decoração</h3>
+                        <p class="text-gray-600 mb-4">Linha premium de tecidos para decoração, incluindo cortinas, estofados e revestimentos, com designs exclusivos e resistência à luz solar e lavagens.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Linho</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Veludo</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Jacquard</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="fabric-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1585435557343-3b92a306103c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Pro Care - Hospitalar" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pro Care</h3>
+                        <p class="text-gray-600 mb-4">Linha especializada em tecidos para uso hospitalar, com propriedades antibacterianas, alta resistência e facilidade de esterilização para ambientes de saúde.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Antimicrobiano</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Hidrorrepelente</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Certificado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="fabric-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Pro Work - Uniformes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pro Work</h3>
+                        <p class="text-gray-600 mb-4">Tecidos técnicos para confecção de uniformes profissionais, com alta resistência, durabilidade e características específicas para diferentes setores industriais.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Anti-chama</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Alta visibilidade</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Resistente a químicos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="fabric-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565354308451-d6e1d0a1e6a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Tecidos Especiais" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Tecidos Especiais</h3>
+                        <p class="text-gray-600 mb-4">Desenvolvemos tecidos sob medida para necessidades específicas, com tratamentos especiais e características técnicas diferenciadas conforme demanda do cliente.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Personalizado</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Tecnológico</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Sob encomenda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossos Serviços</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Além da produção de tecidos, oferecemos serviços completos de beneficiamento</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-4xl text-gray-600 mb-4">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Tingimento</h3>
+                    <p class="text-gray-600">Processo de tingimento com ampla variedade de cores e técnicas, garantindo uniformidade e solidez da cor em diferentes tipos de tecido.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-4xl text-gray-600 mb-4">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Estamparia</h3>
+                    <p class="text-gray-600">Estamparia digital e rotativa com alta definição, permitindo designs complexos e personalizados para diversas aplicações.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-4xl text-gray-600 mb-4">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Tratamentos Especiais</h3>
+                    <p class="text-gray-600">Aplicação de tratamentos como impermeabilização, anti-odor, UV protection e outros acabamentos funcionais conforme necessidade.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-4xl text-gray-600 mb-4">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Encolhimento Controlado</h3>
+                    <p class="text-gray-600">Processo de sanforização para controle preciso do encolhimento dos tecidos, garantindo estabilidade dimensional após lavagens.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-4xl text-gray-600 mb-4">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Prova de Fogo</h3>
+                    <p class="text-gray-600">Tratamentos retardantes de chama para tecidos que necessitam atender normas de segurança contra incêndios.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="service-icon text-4xl text-gray-600 mb-4">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Controle de Qualidade</h3>
+                    <p class="text-gray-600">Rigorosos testes de qualidade em todas as etapas do processo para garantir a excelência dos produtos entregues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossa Trajetória</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item relative pl-8 pb-8">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-blue-600 rounded-full z-10"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-gray-800">Fundação</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">1995</span>
+                        </div>
+                        <p class="text-gray-600">Início das atividades como pequena tecelagem familiar no interior de São Paulo, com foco em tecidos básicos para confecção.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item relative pl-8 pb-8">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-blue-600 rounded-full z-10"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-gray-800">Primeira Expansão</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2002</span>
+                        </div>
+                        <p class="text-gray-600">Aquisição de novos equipamentos e ampliação da fábrica, permitindo aumentar a produção e diversificar os produtos oferecidos.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item relative pl-8 pb-8">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-blue-600 rounded-full z-10"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-gray-800">Implementação do Beneficiamento</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2008</span>
+                        </div>
+                        <p class="text-gray-600">Início dos serviços de beneficiamento de tecidos, agregando valor aos produtos e atendendo demandas mais específicas do mercado.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item relative pl-8 pb-8">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-blue-600 rounded-full z-10"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-gray-800">Certificação ISO 9001</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2014</span>
+                        </div>
+                        <p class="text-gray-600">Conquista da certificação ISO 9001, reconhecendo nosso sistema de gestão da qualidade e processos produtivos.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-blue-600 rounded-full z-10"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-gray-800">Nova Unidade Industrial</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2020</span>
+                        </div>
+                        <p class="text-gray-600">Inauguração de nova unidade industrial com tecnologia de ponta, ampliando nossa capacidade produtiva e variedade de produtos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos prontos para atender suas necessidades em tecidos e serviços têxteis</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Informações de Contato</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Endereço</h4>
+                                <p class="text-gray-600">Rodovia SP-127, Km 45<br>Bairro Industrial, Americana - SP<br>CEP 13465-000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Telefone</h4>
+                                <p class="text-gray-600">(19) 3465-7890<br>(19) 98765-4321 (WhatsApp)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">E-mail</h4>
+                                <p class="text-gray-600">comercial@promodatextil.com.br<br>sac@promodatextil.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Horário de Funcionamento</h4>
+                                <p class="text-gray-600">Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-medium text-gray-800 mb-3">Siga-nos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Envie uma Mensagem</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Assunto</label>
+                            <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">Selecione um assunto</option>
+                                <option value="orcamento">Solicitação de Orçamento</option>
+                                <option value="produtos">Informações sobre Produtos</option>
+                                <option value="servicos">Serviços de Beneficiamento</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition w-full">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Pro Moda Têxtil</h3>
+                    <p class="text-gray-400">Tecelagem e beneficiamento de tecidos com qualidade e tecnologia para atender as demandas do mercado têxtil.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Produtos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tecido para Forro</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tecido para Lençol</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tecido para Decoração</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pro Care (Hospitalar)</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pro Work (Uniformes)</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Serviços</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tingimento</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Estamparia</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tratamentos Especiais</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Encolhimento Controlado</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Prova de Fogo</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Links Úteis</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Termos de Serviço</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Trabalhe Conosco</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Pro Moda Têxtil. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for mobile menu toggle (would need proper implementation)
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button[class*="md:hidden"]');
+            // Would need to add mobile menu functionality here
+        });
+    </script>
+</body>
+</html>
