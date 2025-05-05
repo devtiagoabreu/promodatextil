@@ -41,9 +41,88 @@
             transform: scale(1.1);
             color: #3b82f6;
         }
+        
+        /* Social media sidebar */
+        .social-sidebar {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 40;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px 0 0 8px;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 40;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+        
+        /* Adjust content to not be hidden by sidebar */
+        .container {
+            padding-right: 20px;
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
+    <!-- Social Media Sidebar -->
+    <div class="social-sidebar">
+        <a href="#" class="social-icon bg-blue-600 hover:bg-blue-700">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon bg-pink-600 hover:bg-pink-700">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon bg-red-600 hover:bg-red-700">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="social-icon bg-red-500 hover:bg-red-600">
+            <i class="fab fa-pinterest-p"></i>
+        </a>
+    </div>
+    
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5519987654321" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Header/Navigation -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -292,7 +371,7 @@
                         <i class="fas fa-fire"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Prova de Fogo</h3>
-                    <p class="text-gray-600">Tratamentos retardantes de chama para tecidos que necessitam atender normas de segurança contra incêndios.</p>
+                    <p class="text-gray-600">Tratamentos retardantes de chame para tecidos que necessitam atender normas de segurança contra incêndios.</p>
                 </div>
                 
                 <!-- Service 6 -->
